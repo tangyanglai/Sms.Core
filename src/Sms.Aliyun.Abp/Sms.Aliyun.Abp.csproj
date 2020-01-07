@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Description>基于阿里云短信
+原作者代码GitHub：https://github.com/xin-lai/Magicodes.Sms
+现代码GitHub：https://github.com/tangyanglai/Sms.Core</Description>
+    <Authors>TangYangLai</Authors>
+    <Company>TangYangLai</Company>
+    <RepositoryUrl></RepositoryUrl>
+    <PackageProjectUrl>https://github.com/tangyanglai/Sms.Core</PackageProjectUrl>
+    <Copyright>TangYangLai</Copyright>
+    <PackageIcon>logo.jpg</PackageIcon>
+    <PackageIconUrl />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +23,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sms.Aliyun\Sms.Aliyun.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="logo.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

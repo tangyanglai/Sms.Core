@@ -6,7 +6,16 @@
     <Company>TangYangLai</Company>
     <Description>基于阿里云短信
 原作者代码GitHub：https://github.com/xin-lai/Magicodes.Sms
-现代码GitHub：</Description>
+现代码GitHub：https://github.com/tangyanglai/Sms.Core</Description>
+    <PackageProjectUrl>https://github.com/tangyanglai/Sms.Core</PackageProjectUrl>
+    <Copyright>TangYangLai</Copyright>
+    <PackageIcon>logo.jpg</PackageIcon>
+    <PackageIconUrl />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +29,13 @@
     <Reference Include="aliyun-net-sdk-dysmsapi">
       <HintPath>..\..\..\..\..\..\个人项目\aliyun-openapi-net-sdk\aliyun-net-sdk-dysmsapi\bin\Debug\netstandard2.0\aliyun-net-sdk-dysmsapi.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="logo.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

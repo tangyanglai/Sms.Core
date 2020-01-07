@@ -22,3 +22,5 @@ nuget.exe
 applicationhost.config
 packages/
 *.nupkg
+*.nuspec
+
