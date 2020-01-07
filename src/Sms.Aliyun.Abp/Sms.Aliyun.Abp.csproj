@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <Description>基于阿里云短信
 原作者代码GitHub：https://github.com/xin-lai/Magicodes.Sms
 现代码GitHub：https://github.com/tangyanglai/Sms.Core</Description>
@@ -10,10 +10,18 @@
     <RepositoryUrl></RepositoryUrl>
     <PackageProjectUrl>https://github.com/tangyanglai/Sms.Core</PackageProjectUrl>
     <Copyright>TangYangLai</Copyright>
-    <PackageIcon>logo.jpg</PackageIcon>
+    <PackageIcon></PackageIcon>
     <PackageIconUrl />
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.1.1</AssemblyVersion>
+    <FileVersion>1.0.1.1</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="logo.jpg" />
+    <None Remove="logo.jpg" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Abp" Version="5.0.0" />
@@ -23,13 +31,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sms.Aliyun\Sms.Aliyun.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="logo.jpg">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
   </ItemGroup>
 
 </Project>

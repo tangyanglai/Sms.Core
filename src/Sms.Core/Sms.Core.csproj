@@ -9,10 +9,18 @@
     <RepositoryUrl></RepositoryUrl>
     <PackageProjectUrl>https://github.com/tangyanglai/Sms.Core</PackageProjectUrl>
     <Copyright>TangYangLai</Copyright>
-    <PackageIcon>logo.jpg</PackageIcon>
+    <PackageIcon></PackageIcon>
     <PackageIconUrl />
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.1.1</AssemblyVersion>
+    <FileVersion>1.0.1.1</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="logo.jpg" />
+    <None Remove="logo.jpg" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
@@ -26,13 +34,6 @@
     <Reference Include="aliyun-net-sdk-dysmsapi">
       <HintPath>..\..\..\..\..\..\个人项目\aliyun-openapi-net-sdk\aliyun-net-sdk-dysmsapi\bin\Debug\netstandard2.0\aliyun-net-sdk-dysmsapi.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="logo.jpg">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
   </ItemGroup>
 
 </Project>
