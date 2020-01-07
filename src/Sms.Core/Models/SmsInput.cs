@@ -232,8 +232,6 @@ namespace Sms.Core.Models
         public string TemplateCode { get; set; }
     }
 
-
-
     public class DeleteSmsSignInput
     {
         /// <summary>
