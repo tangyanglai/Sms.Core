@@ -1,5 +1,0 @@
-E:\公司项目\Training\代码\组件\Sms.Core\Sms.Core\bin\Debug\netcoreapp3.1\Sms.Core.deps.json
-E:\公司项目\Training\代码\组件\Sms.Core\Sms.Core\bin\Debug\netcoreapp3.1\Sms.Core.dll
-E:\公司项目\Training\代码\组件\Sms.Core\Sms.Core\obj\Debug\netcoreapp3.1\Sms.Core.csprojAssemblyReference.cache
-E:\公司项目\Training\代码\组件\Sms.Core\Sms.Core\obj\Debug\netcoreapp3.1\Sms.Core.AssemblyInfoInputs.cache
-E:\公司项目\Training\代码\组件\Sms.Core\Sms.Core\obj\Debug\netcoreapp3.1\Sms.Core.AssemblyInfo.cs
