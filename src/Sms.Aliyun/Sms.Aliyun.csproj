@@ -1,23 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.2</Version>
     <Authors>TangYangLai</Authors>
     <Company>TangYangLai</Company>
     <Description>基于阿里云短信
 原作者代码GitHub：https://github.com/xin-lai/Magicodes.Sms
 现代码GitHub：https://github.com/tangyanglai/Sms.Core</Description>
-    <PackageProjectUrl>https://github.com/tangyanglai/Sms.Core</PackageProjectUrl>
     <Copyright>TangYangLai</Copyright>
-    <PackageIcon></PackageIcon>
-    <PackageIconUrl />
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.1.1</AssemblyVersion>
-    <Version>1.0.1</Version>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <WarningLevel>0</WarningLevel>
+    <PackageProjectUrl>https://github.com/tangyanglai/Sms.Core</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,10 +18,10 @@
 
   <ItemGroup>
     <Reference Include="aliyun-net-sdk-core">
-      <HintPath>..\..\..\..\..\..\个人项目\aliyun-openapi-net-sdk\aliyun-net-sdk-dysmsapi\bin\Debug\netstandard2.0\aliyun-net-sdk-core.dll</HintPath>
+      <HintPath>..\..\..\..\..\aliyun-openapi-net-sdk\aliyun-net-sdk-dysmsapi\bin\Debug\netstandard2.0\aliyun-net-sdk-core.dll</HintPath>
     </Reference>
     <Reference Include="aliyun-net-sdk-dysmsapi">
-      <HintPath>..\..\..\..\..\..\个人项目\aliyun-openapi-net-sdk\aliyun-net-sdk-dysmsapi\bin\Debug\netstandard2.0\aliyun-net-sdk-dysmsapi.dll</HintPath>
+      <HintPath>..\..\..\..\..\aliyun-openapi-net-sdk\aliyun-net-sdk-dysmsapi\bin\Debug\netstandard2.0\aliyun-net-sdk-dysmsapi.dll</HintPath>
     </Reference>
   </ItemGroup>
 

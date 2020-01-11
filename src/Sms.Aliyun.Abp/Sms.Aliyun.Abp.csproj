@@ -1,21 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.2</Version>
+    <Authors>TangYangLai</Authors>
     <Description>基于阿里云短信
 原作者代码GitHub：https://github.com/xin-lai/Magicodes.Sms
 现代码GitHub：https://github.com/tangyanglai/Sms.Core</Description>
-    <Authors>TangYangLai</Authors>
-    <Company>TangYangLai</Company>
-    <RepositoryUrl></RepositoryUrl>
     <PackageProjectUrl>https://github.com/tangyanglai/Sms.Core</PackageProjectUrl>
-    <Copyright>TangYangLai</Copyright>
-    <PackageIcon></PackageIcon>
-    <PackageIconUrl />
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.1.1</AssemblyVersion>
-    <FileVersion>1.0.1.1</FileVersion>
-    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
