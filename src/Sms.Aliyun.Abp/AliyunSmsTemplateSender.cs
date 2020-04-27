@@ -72,7 +72,8 @@ namespace Sms.Aliyun.Abp
                 AliyunSmsBuilder.Create()
                     //设置日志记录
                     .WithLoggerAction(LogAction)
-                    .SetSettingsFunc(() => GetConfigFromConfigOrSettingsByKey<AliyunSmsSettting>().Result).Build();
+                    .SetSettingsFunc(() => GetConfigFromConfigOrSettingsByKey<AliyunSmsSettting>().Result)
+                    .Build();
 
                 SmsService = new AliyunSmsService();
             }

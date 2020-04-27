@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,23 +9,39 @@ namespace Sms.Core.Models
     /// <summary>
     ///     模板消息内容
     /// </summary>
-    public class SendTemplateMessageInput : TemplateMessage
+    public class SendTemplateMessageInput
     {
+        /// <summary>
+        /// 是否有模板参数
+        /// </summary>
+        public virtual bool HaveParm { get; set; }
+
+        /// <summary>
+        /// 模板Id
+        /// </summary>
+        public virtual string TemplateCode { get; set; }
+        public SendTemplateMessageInput()
+        {
+        }
         /// <summary>
         ///     接收服务目标，多个手机号码请用逗号分隔
         ///     支持单个或多个手机号码，传入号码为11位手机号码，不能加0或+86。群发短信需传入多个号码，以英文逗号分隔，一次调用最多传入200个号码。示例：18600000000,13911111111,13322222222
         /// </summary>
         public virtual string PhoneNumber { get; set; }
 
-        /// <summary>
-        ///     模板参数
-        /// </summary>
-        public virtual Dictionary<string, string> Data { get; set; }
+        ///// <summary>
+        /////     模板参数
+        ///// </summary>
+        public virtual SendData SendParmData { get; set; }
+        //public virtual Dictionary<string, string> Data { get; set; }
 
-        /// <summary>
-        /// 是否有模板参数
-        /// </summary>
-        public virtual bool HaveParm { get; set; }
+
+
+
+        ///// <summary>
+        ///// 是否有模板参数
+        ///// </summary>
+        //public virtual bool HaveParm { get; set; }
 
         ///// <summary>
         ///// 扩展参数
@@ -42,22 +59,45 @@ namespace Sms.Core.Models
         /// </summary>
         public virtual string SignName { get; set; }
 
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            //sb.AppendFormat("Destination:{0};", Destination);
-            //sb.AppendFormat("SignName:{0};", SignName);
-            //sb.AppendFormat("ExtendParam:{0};", ExtendParam);
-            //sb.AppendFormat("TemplateCode:{0};", TemplateCode);
-            //sb.AppendLine();
-            //sb.AppendLine("Data:");
-            sb.Append("{");
-            foreach (var item in Data)
-            {
-                sb.AppendFormat("\"{0}\":\"{1}\",", item.Key, item.Value);
-            }
-            return sb.ToString().TrimEnd(',') + "};";
-        }
+        //public override string ToString()
+        //{
+        //    var sb = new StringBuilder();
+        //    //sb.AppendFormat("Destination:{0};", Destination);
+        //    //sb.AppendFormat("SignName:{0};", SignName);
+        //    //sb.AppendFormat("ExtendParam:{0};", ExtendParam);
+        //    //sb.AppendFormat("TemplateCode:{0};", TemplateCode);
+        //    //sb.AppendLine();
+        //    //sb.AppendLine("Data:");
+        //    sb.Append("{");
+        //    foreach (var item in Data)
+        //    {
+        //        sb.AppendFormat("\"{0}\":\"{1}\",", item.Key, item.Value);
+        //    }
+        //    return sb.ToString().TrimEnd(',') + "};";
+        //}
+    }
+
+    public class SendData
+    { 
+    }
+
+    /// <summary>
+    ///     模板消息内容
+    /// </summary>
+    public class SendBatchTemplateMessageInput
+    {
+        /// <summary>
+        /// 是否有模板参数
+        /// </summary>
+        public virtual bool HaveParm { get; set; }
+
+        /// <summary>
+        /// 模板Id
+        /// </summary>
+        public virtual string TemplateCode { get; set; }
+
+        public List<SendTemplateMessageInput> SendTemplateMessageInputs { get; set; }
+
     }
 
     public class QuerySendDetailsInput
@@ -84,31 +124,6 @@ namespace Sms.Core.Models
         public virtual int CurrentPage { get; set; }
     }
 
-
-    /// <summary>
-    ///     模板消息内容
-    /// </summary>
-    public class SendBatchTemplateMessageInput : TemplateMessage
-    {
-        public List<SendTemplateMessageInput> SendTemplateMessageInputs { get; set; }
-
-    }
-
-
-    public class TemplateMessage
-    {
-        /// <summary>
-        /// 是否有模板参数
-        /// </summary>
-        public virtual bool HaveParm { get; set; }
-
-        /// <summary>
-        /// 模板Id
-        /// </summary>
-        public virtual string TemplateCode { get; set; }
-
-
-    }
 
     public class QuerySmsSignInput
     {

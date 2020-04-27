@@ -99,7 +99,7 @@ namespace Sms.Aliyun
                 request.TemplateCode = input.TemplateCode;
                 //可选:模板中的变量替换JSON串
                 if (input.HaveParm)
-                    request.TemplateParam = input.ToString();
+                    request.TemplateParam = JsonConvert.SerializeObject(input.SendParmData);
                 ////可选:outId为提供给业务方扩展字段,最终在短信回执消息中将此值带回给调用者 
                 //request.OutId = client.AliyunSmsSettting.OutId;
                 //请求失败这里会抛ClientException异常
@@ -151,7 +151,7 @@ namespace Sms.Aliyun
                 request.TemplateCode = input.TemplateCode;
                 //可选:模板中的变量替换JSON串
                 if (input.HaveParm)
-                    request.TemplateParamJson = JsonConvert.SerializeObject(input.SendTemplateMessageInputs.Select(a => a.ToString()).ToList());
+                    request.TemplateParamJson = JsonConvert.SerializeObject(input.SendTemplateMessageInputs.Select(a => a.SendParmData).ToList());
 
                 //请求失败这里会抛ClientException异常
                 var sendSmsResponse = acsClient.GetAcsResponse(request);
